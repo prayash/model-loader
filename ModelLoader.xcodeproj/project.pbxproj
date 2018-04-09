@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED31B955207B361C00DEE95D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31B954207B361C00DEE95D /* Extensions.swift */; };
 		EDF1BE65207B314000F74D55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF1BE4B207B314000F74D55 /* ViewController.swift */; };
 		EDF1BE66207B314000F74D55 /* VirtualObjectInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF1BE4C207B314000F74D55 /* VirtualObjectInteraction.swift */; };
 		EDF1BE67207B314000F74D55 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF1BE4E207B314000F74D55 /* Models.scnassets */; };
@@ -33,6 +34,7 @@
 		11063F3B1EBE651B0033EE6D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3929C4881E89EC2C00E00B60 /* ModelLoader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModelLoader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4776C9704776CC7000000001 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		ED31B954207B361C00DEE95D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EDF1BE4B207B314000F74D55 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EDF1BE4C207B314000F74D55 /* VirtualObjectInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectInteraction.swift; sourceTree = "<group>"; };
 		EDF1BE4E207B314000F74D55 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				EDF1BE55207B314000F74D55 /* Virtual Objects */,
 				EDF1BE60207B314000F74D55 /* Focus Square */,
 				EDF1BE5B207B314000F74D55 /* Utilities */,
+				ED31B954207B361C00DEE95D /* Extensions.swift */,
 			);
 			path = ModelLoader;
 			sourceTree = "<group>";
@@ -191,7 +194,7 @@
 				TargetAttributes = {
 					3929C4871E89EC2C00E00B60 = {
 						CreatedOnToolsVersion = 9.0;
-						DevelopmentTeam = JZNN87YRMJ;
+						DevelopmentTeam = 6CU374MXYV;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -246,6 +249,7 @@
 				EDF1BE72207B314000F74D55 /* ViewController+Actions.swift in Sources */,
 				EDF1BE71207B314000F74D55 /* Utilities.swift in Sources */,
 				EDF1BE78207B314000F74D55 /* ViewController+ObjectSelection.swift in Sources */,
+				ED31B955207B361C00DEE95D /* Extensions.swift in Sources */,
 				EDF1BE73207B314000F74D55 /* ViewController+ARSCNViewDelegate.swift in Sources */,
 				EDF1BE6D207B314000F74D55 /* VirtualObjectLoader.swift in Sources */,
 				EDF1BE65207B314000F74D55 /* ViewController.swift in Sources */,
@@ -385,10 +389,10 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JZNN87YRMJ;
+				DEVELOPMENT_TEAM = 6CU374MXYV;
 				INFOPLIST_FILE = "$(SRCROOT)/ModelLoader/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.trex.ar;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.prayash.model-loader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -405,10 +409,10 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JZNN87YRMJ;
+				DEVELOPMENT_TEAM = 6CU374MXYV;
 				INFOPLIST_FILE = "$(SRCROOT)/ModelLoader/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.trex.ar;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.prayash.model-loader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;

@@ -190,6 +190,10 @@ class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
 							alignment: planeAlignment,
 							allowAnimation: allowAnimation)
     }
+    
+    func didChangeSlider(value: Float) {
+        print(value)
+    }
 }
 
 /// Extends `UIGestureRecognizer` to provide the center point resulting from multiple touches.

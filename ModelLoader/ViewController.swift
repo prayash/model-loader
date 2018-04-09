@@ -29,6 +29,20 @@ class ViewController: UIViewController {
     lazy var statusViewController: StatusViewController = {
         return childViewControllers.lazy.flatMap({ $0 as? StatusViewController }).first!
     }()
+    
+    var yOffset: Float = 0.0
+    lazy var yAnchorSlider: UISlider = {
+        let slider = UISlider(frame: CGRect(x: 0, y: 0, width: 280, height: 20))
+        slider.minimumValue = -1
+        slider.maximumValue = 1
+        slider.isContinuous = true
+        slider.tintColor = UIColor.white
+        slider.value = 0.0
+        slider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
+        slider.isUserInteractionEnabled = true
+        slider.addTarget(self, action: #selector(sliderDidChange), for: .valueChanged)
+        return slider
+    }()
 	
 	/// The view controller that displays the virtual object selection menu.
 	var objectsViewController: VirtualObjectSelectionViewController?
@@ -64,6 +78,8 @@ class ViewController: UIViewController {
         
         sceneView.delegate = self
         sceneView.session.delegate = self
+        
+        setupLayout()
 
         // Set up scene content.
         setupCamera()
@@ -106,8 +122,29 @@ class ViewController: UIViewController {
 
         session.pause()
 	}
+    
+    // MARK: - Callbacks
+    
+    @objc func sliderDidChange(sender: UISlider) {
+        yOffset = sender.value
+        repositionSelectedObject()
+    }
+    
+    func repositionSelectedObject() {
+        virtualObjectInteraction.selectedObject?.position.y += yOffset
+    }
 
     // MARK: - Scene content setup
+    
+    func setupLayout() {
+        view.addSubview(yAnchorSlider)
+        
+        let xPos = view.frame.width * 0.05
+        let yPos = view.frame.minY + view.frame.height * 0.15
+        let width = view.frame.width * 0.1
+        let height = view.frame.height * 0.15
+        yAnchorSlider.frame = CGRect(x: xPos, y: yPos, width: width, height: height)
+    }
 
     func setupCamera() {
         guard let camera = sceneView.pointOfView?.camera else {
